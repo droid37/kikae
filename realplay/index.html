@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>REAL PLAY · 보컬 브랜딩 코치 Jady</title>
+<meta name="description" content="방법론을 밖에서 찾지 않는 13주. 보컬 브랜딩 코치 Jady(제이디)의 온라인 1:1 코칭 Finding Yourself.">
+<meta name="theme-color" content="#0a0a0b">
+
+<!-- 카카오톡·인스타 공유 미리보기 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="REAL PLAY · 나도 톤깡패 될 수 있을까?">
+<meta property="og:description" content="보컬 브랜딩 코치 Jady의 13주 1:1 코칭 · 무료 PDF 가이드">
+<!-- <meta property="og:image" content="https://jlifeschool.com/realplay/og.jpg"> 1200x630 이미지 올린 뒤 주석 해제 -->
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --surface: #131316;
+    --surface-2: #18181c;
+    --line: #26262c;
+    --line-soft: #1d1d22;
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+    --faint: #71717a;
+    --red: #e03a3e;
+    --red-deep: #b8292d;
+    --red-glow: rgba(224, 58, 62, .28);
+    --blue: #8b90ff;
+    --green: #6fd68f;
+    --radius: 22px;
+    --gutter: 20px;
+    --max: 1080px;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: -.01em;
+    word-break: keep-all;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg, iframe { display: block; max-width: 100%; }
+  a { color: inherit; }
+  b, strong { color: #fff; font-weight: 700; }
+  :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 8px; }
+
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  section { position: relative; padding: 96px 0; border-top: 1px solid var(--line-soft); }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin: 0 0 18px;
+  }
+  h1, h2, h3 { margin: 0; line-height: 1.25; letter-spacing: -.03em; font-weight: 800; }
+  h2 { font-size: clamp(30px, 6.4vw, 46px); }
+  .lead { color: #d4d4d8; font-size: clamp(17px, 2.4vw, 19px); max-width: 640px; margin: 22px 0 0; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 54px; padding: 0 26px;
+    border-radius: 999px; border: 1px solid transparent;
+    font: inherit; font-size: 16px; font-weight: 700; text-decoration: none; cursor: pointer;
+    transition: transform .2s var(--ease), background .2s, border-color .2s, box-shadow .2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn-red { background: var(--red); color: #fff; box-shadow: 0 10px 30px -10px var(--red-glow); }
+  .btn-red:hover { background: #ea4448; box-shadow: 0 14px 40px -10px rgba(224,58,62,.55); }
+  .btn-ghost { background: transparent; color: var(--text); border-color: #3a3a42; }
+  .btn-ghost:hover { border-color: #5a5a64; background: rgba(255,255,255,.03); }
+  .btn .arrow { transition: transform .2s var(--ease); }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ---------- Header ---------- */
+  .header {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    background: rgba(10,10,11,.72);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s;
+  }
+  .header.scrolled { border-bottom-color: var(--line); }
+  .header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--red); }
+  .logo svg { width: 30px; height: 22px; }
+  .logo-text { font-weight: 900; font-size: 12px; line-height: .95; letter-spacing: .12em; }
+  .nav { display: none; gap: 30px; font-size: 15px; font-weight: 600; }
+  .nav a { text-decoration: none; color: var(--muted); transition: color .2s; }
+  .nav a:hover { color: var(--text); }
+  .header .btn { min-height: 42px; padding: 0 20px; font-size: 15px; }
+  .progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--red); transform-origin: 0 50%; transform: scaleX(0); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 150px 0 90px; border-top: 0; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: -20% -30% auto -30%; height: 620px;
+    background: radial-gradient(closest-side, rgba(224,58,62,.22), transparent 70%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; }
+  .hero h1 { font-size: clamp(40px, 10vw, 76px); line-height: 1.12; }
+  .hero h1 .accent { color: var(--red); }
+  .hero .lead { margin-top: 26px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 40px 0 0; padding: 0; list-style: none;
+  }
+  .hero-meta li {
+    font-size: 14px; font-weight: 600; color: #d4d4d8;
+    padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(19,19,22,.7);
+  }
+  .wave { display: flex; align-items: center; gap: 4px; height: 64px; margin-bottom: 34px; }
+  .wave span {
+    width: 4px; border-radius: 4px; background: var(--red); opacity: .9;
+    height: var(--h); animation: pulse 1.4s var(--d) infinite ease-in-out alternate;
+    transform-origin: 50% 50%;
+  }
+  @keyframes pulse { from { transform: scaleY(.25); opacity: .45; } to { transform: scaleY(1); opacity: 1; } }
+
+  /* ---------- Guide (lead magnet) ---------- */
+  .guide-card {
+    position: relative; max-width: 720px; margin: 0 auto; padding: 48px 24px 40px;
+    border: 1px solid #3a1f22; border-radius: 28px; text-align: center; overflow: hidden;
+    background:
+      radial-gradient(120% 70% at 50% 0%, rgba(224,58,62,.14), transparent 60%),
+      linear-gradient(180deg, #151013, #0f0f12);
+  }
+  .pill {
+    display: inline-block; padding: 8px 18px; border-radius: 999px;
+    background: rgba(224,58,62,.14); color: #ff6b6f; font-size: 14px; font-weight: 800; letter-spacing: .02em;
+  }
+  .guide-card h2 { margin-top: 22px; }
+  .guide-card .lead { margin: 18px auto 0; color: var(--muted); }
+  .form { display: grid; gap: 12px; max-width: 460px; margin: 32px auto 0; text-align: left; }
+  .field { position: relative; }
+  .field input {
+    width: 100%; height: 58px; padding: 20px 18px 6px;
+    background: #0c0c0e; color: var(--text); font: inherit; font-size: 16px;
+    border: 1px solid #2d2327; border-radius: 16px; transition: border-color .2s, box-shadow .2s;
+    -webkit-appearance: none; appearance: none;
+  }
+  .field label {
+    position: absolute; left: 19px; top: 17px; color: var(--faint); font-size: 16px; pointer-events: none;
+    transition: transform .18s var(--ease), color .18s, font-size .18s;
+    transform-origin: 0 0;
+  }
+  .field input:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 4px rgba(224,58,62,.15); }
+  .field input:focus + label,
+  .field input:not(:placeholder-shown) + label { transform: translateY(-11px); font-size: 12px; color: #ff6b6f; }
+  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: var(--muted); line-height: 1.55; cursor: pointer; padding: 4px 2px; }
+  .consent input { flex: none; width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--red); }
+  .form .btn { width: 100%; margin-top: 4px; }
+  .form-note { margin: 16px 0 0; font-size: 13.5px; color: var(--faint); text-align: center; }
+  .form-status { min-height: 1em; margin: 0; font-size: 14.5px; text-align: center; color: var(--green); }
+  .form-status.err { color: #ff8a8d; }
+
+  /* ---------- Course ---------- */
+  .course-head { max-width: 760px; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 44px 0 14px; }
+  .step {
+    --c: var(--red);
+    position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px;
+    padding: 22px 8px 20px; border-radius: 20px; cursor: pointer; text-align: center;
+    background: var(--surface); color: var(--text); font: inherit;
+    border: 1px solid color-mix(in srgb, var(--c) 32%, transparent);
+    transition: transform .25s var(--ease), background .25s, border-color .25s, box-shadow .25s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .step[data-phase="flowing"] { --c: var(--blue); }
+  .step[data-phase="finding"] { --c: var(--green); }
+  .step small { font-size: 12px; font-weight: 800; letter-spacing: .22em; color: color-mix(in srgb, var(--c) 80%, #fff 0%); opacity: .85; }
+  .step strong { color: var(--c); font-size: clamp(20px, 5.4vw, 30px); font-weight: 900; letter-spacing: -.02em; line-height: 1.3; }
+  .step span { font-size: clamp(12.5px, 3.3vw, 15px); color: var(--muted); }
+  .step:hover { transform: translateY(-2px); }
+  .step[aria-pressed="true"] {
+    background: color-mix(in srgb, var(--c) 10%, var(--surface));
+    border-color: var(--c);
+    box-shadow: 0 16px 40px -18px var(--c);
+  }
+  .steps-hint { margin: 0 0 22px; font-size: 13.5px; color: var(--faint); text-align: center; }
+
+  .timeline { position: relative; margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+  .week {
+    --c: var(--red);
+    display: grid; grid-template-columns: 104px 1fr; gap: 16px;
+    padding: 24px 22px; border-top: 1px solid var(--line-soft);
+    transition: opacity .3s, background .3s;
+  }
+  .week:first-child { border-top: 0; }
+  .week[data-phase="flowing"] { --c: var(--blue); }
+  .week[data-phase="finding"] { --c: var(--green); }
+  .week-no { font-weight: 900; font-size: 15px; letter-spacing: .02em; color: var(--c); padding-top: 2px; white-space: nowrap; }
+  .week-no em { display: block; font-style: normal; font-size: 12px; font-weight: 600; color: var(--faint); letter-spacing: 0; margin-top: 2px; }
+  .week h3 { font-size: 18px; letter-spacing: -.02em; }
+  .week h3 .ko { color: #d4d4d8; font-weight: 700; }
+  .week p { margin: 6px 0 0; color: var(--muted); font-size: 16px; }
+  .bar { height: 4px; margin-top: 14px; border-radius: 4px; background: var(--line-soft); overflow: hidden; }
+  .bar i { display: block; height: 100%; width: var(--w); background: var(--c); border-radius: 4px; transform-origin: 0 50%; transform: scaleX(0); transition: transform 1s var(--ease) .15s; }
+  .timeline.seen .bar i { transform: scaleX(1); }
+  .timeline.filtered .week { opacity: .28; }
+  .timeline.filtered .week.on { opacity: 1; background: color-mix(in srgb, var(--c) 6%, transparent); }
+
+  .manifesto {
+    position: relative; margin: 36px 0 0; padding: 30px 26px 30px 30px;
+    border: 1px solid var(--line); border-left: 3px solid var(--red); border-radius: var(--radius);
+    background: linear-gradient(90deg, rgba(224,58,62,.07), transparent 60%), var(--surface);
+    font-size: 17px; color: #d4d4d8;
+  }
+  .manifesto .big { display: block; font-size: clamp(22px, 4.6vw, 28px); font-weight: 800; color: #fff; letter-spacing: -.03em; line-height: 1.35; margin-bottom: 14px; }
+  .manifesto p { margin: 0; }
+  .manifesto .sign { margin-top: 14px; color: var(--muted); }
+
+  /* ---------- Process ---------- */
+  .process { display: grid; gap: 12px; margin: 44px 0 0; padding: 0; list-style: none; counter-reset: p; }
+  .process li {
+    counter-increment: p; position: relative;
+    padding: 24px 22px 24px 76px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface);
+  }
+  .process li::before {
+    content: counter(p, decimal-leading-zero);
+    position: absolute; left: 22px; top: 22px;
+    font-weight: 900; font-size: 22px; color: var(--red); letter-spacing: -.02em;
+  }
+  .process h3 { font-size: 18px; }
+  .process p { margin: 4px 0 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ---------- YouTube ---------- */
+  .video {
+    position: relative; aspect-ratio: 16 / 9; margin-top: 40px; border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--line); background: #000;
+  }
+  .video button {
+    all: unset; position: absolute; inset: 0; cursor: pointer; display: grid; place-items: center;
+    background-size: cover; background-position: center;
+  }
+  .video button::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.55)); }
+  .play {
+    position: relative; z-index: 1; width: 78px; height: 56px; border-radius: 16px; background: var(--red);
+    display: grid; place-items: center; box-shadow: 0 12px 40px -8px rgba(224,58,62,.7);
+    transition: transform .25s var(--ease);
+  }
+  .video button:hover .play { transform: scale(1.08); }
+  .video-title { position: absolute; z-index: 1; left: 20px; right: 20px; bottom: 16px; font-weight: 700; font-size: 15px; text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video.empty {
+    display: grid; place-items: center; text-align: center; padding: 24px;
+    background: repeating-linear-gradient(135deg, #111114 0 14px, #0d0d10 14px 28px);
+    color: var(--muted); font-size: 15px;
+  }
+  .video.empty code { color: #ff8a8d; font-size: 14px; }
+  .video-cta { margin-top: 20px; }
+
+  /* ---------- FAQ ---------- */
+  .faq { margin-top: 36px; border-top: 1px solid var(--line); }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    padding: 22px 2px; font-weight: 700; font-size: 17px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: ""; flex: none; width: 12px; height: 12px;
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg) translateY(-3px); transition: transform .25s var(--ease);
+  }
+  .faq details[open] summary::after { transform: rotate(-135deg) translateY(-3px); }
+  .faq p { margin: 0; padding: 0 2px 24px; color: var(--muted); }
+
+  /* ---------- Contact ---------- */
+  .contact { text-align: center; overflow: hidden; }
+  .contact::before {
+    content: ""; position: absolute; left: 50%; bottom: 0; width: 900px; height: 420px; transform: translateX(-50%);
+    background: radial-gradient(closest-side, rgba(224,58,62,.14), transparent 70%); pointer-events: none;
+  }
+  .contact h2 { font-size: clamp(30px, 7vw, 52px); }
+  .contact .lead { margin: 20px auto 0; color: var(--muted); }
+  .contact-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 36px; position: relative; }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--line-soft); padding: 44px 0 120px; color: var(--faint); font-size: 14.5px; }
+  footer .logo { margin-bottom: 18px; }
+  footer p { margin: 0; }
+  footer a { color: var(--muted); text-underline-offset: 3px; }
+
+  /* ---------- Mobile sticky CTA ---------- */
+  .dock {
+    position: fixed; z-index: 40; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom));
+    display: flex; align-items: center; gap: 12px; padding: 10px 10px 10px 18px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: rgba(19,19,22,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    transform: translateY(140%); transition: transform .35s var(--ease);
+  }
+  .dock.show { transform: none; }
+  .dock p { margin: 0; flex: 1; font-size: 14px; line-height: 1.35; color: #d4d4d8; }
+  .dock p b { display: block; font-size: 15px; }
+  .dock .btn { min-height: 46px; padding: 0 20px; font-size: 15px; flex: none; }
+
+  /* ---------- Reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 420px) {
+    :root { --gutter: 16px; }
+    .week { grid-template-columns: 1fr; gap: 6px; padding: 22px 18px; }
+    .week-no em { display: inline; margin-left: 8px; }
+    .hero-ctas .btn { flex: 1 1 100%; }
+    .steps { gap: 8px; }
+  }
+  @media (min-width: 760px) {
+    section { padding: 130px 0; }
+    .nav { display: flex; }
+    .hero { padding: 190px 0 130px; }
+    .guide-card { padding: 64px 56px 52px; }
+    .process { grid-template-columns: repeat(4, 1fr); }
+    .process li { padding: 72px 22px 26px; }
+    .week { grid-template-columns: 150px 1fr; padding: 28px 32px; }
+    .dock { display: none; }
+    footer { padding-bottom: 56px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+    footer .logo { margin-bottom: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    .bar i { transform: scaleX(1); }
+  }
+</style>
+</head>
+<body>
+
+<!-- 로고 심볼 (카세트) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 30 22">
+    <rect x="1" y="1" width="28" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="9" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="21" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M6 21l2-4h14l2 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header class="header" id="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="REAL PLAY 홈">
+      <svg><use href="#mark"/></svg>
+      <span class="logo-text">REAL<br>PLAY</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#course">13주 코스</a>
+      <a href="#process">진행 방식</a>
+      <a href="#youtube">영상</a>
+      <a href="#contact">문의</a>
+    </nav>
+    <a class="btn btn-red" href="#guide">무료 가이드</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="wave" id="wave" aria-hidden="true"></div>
+      <p class="eyebrow">Vocal Branding · 1:1 Online</p>
+      <h1>잘 부르는 목소리 말고,<br><span class="accent">진짜 내 목소리.</span></h1>
+      <p class="lead">
+        보컬 브랜딩 코치 <b>Jady(제이디)</b>와 함께하는 13주.
+        방법론을 밖에서 찾지 않고, 스스로를 트레이닝하는 메커니즘을 몸에 새깁니다.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="#guide">무료 PDF 가이드 받기 <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="#course">13주 코스 보기</a>
+      </div>
+      <ul class="hero-meta">
+        <li>온라인 1:1</li>
+        <li>13주 · 3F 코어</li>
+        <li>사전 질문지로 진행</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FREE GUIDE -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="guide-card reveal">
+        <span class="pill">무료 PDF 가이드</span>
+        <h2>나도 톤깡패<br>될 수 있을까?</h2>
+        <p class="lead">
+          톤깡패들의 평행이론 7가지를 24년 인사이트로 정리했어요.<br>
+          '나만의 진짜 목소리'로 가는 첫 지도 — 지금 받아보세요.
+        </p>
+        <form class="form" id="guideForm" novalidate>
+          <div class="field">
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required>
+            <label for="f-name">이름</label>
+          </div>
+          <div class="field">
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder=" " required>
+            <label for="f-email">이메일 주소</label>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>개인정보(이름·이메일) 수집·이용에 동의합니다. 가이드 발송 목적으로만 사용돼요.</span>
+          </label>
+          <button class="btn btn-red" type="submit">무료 가이드 받기 <span class="arrow">→</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+        <p class="form-note">입력하신 이메일로 PDF를 보내드려요 · 스팸함도 확인해 주세요</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE -->
+  <section id="course">
+    <div class="wrap">
+      <div class="course-head reveal">
+        <p class="eyebrow">Services · 3F Core</p>
+        <h2>Finding Yourself<br>13주 코스</h2>
+        <p class="lead">
+          스스로를 트레이닝할 수 있는 메커니즘을 몸에 새기고, <b>결국 답은 내 안에 있었음</b>을 깨닫는 여정.
+          이 코스의 목적은 명확해요 — <b>더 이상 방법론을 외부에서 찾지 않는 것.</b>
+        </p>
+      </div>
+
+      <div class="steps reveal" role="group" aria-label="3F 단계 선택">
+        <button class="step" type="button" data-phase="filtering" aria-pressed="false">
+          <small>STEP 1</small><strong>Filtering</strong><span>Drop yours</span>
+        </button>
+        <button class="step" type="button" data-phase="flowing" aria-pressed="false">
+          <small>STEP 2</small><strong>Flowing</strong><span>Dive in you</span>
+        </button>
+        <button class="step" type="button" data-phase="finding" aria-pressed="false">
+          <small>STEP 3</small><strong>Finding</strong><span>Being yourself</span>
+        </button>
+      </div>
+      <p class="steps-hint">단계를 누르면 해당 주차가 강조돼요</p>
+
+      <ol class="timeline reveal" id="timeline">
+        <li class="week" data-phase="intro">
+          <div class="week-no">WEEK 1<em>1주</em></div>
+          <div>
+            <h3>The Interview <span class="ko">· 밑그림</span></h3>
+            <p>2시간 인터뷰로 당신의 이야기를 듣고 존재를 읽어냅니다.</p>
+            <div class="bar"><i style="--w: 7.7%"></i></div>
+          </div>
+        </li>
+        <li class="week" data-phase="filtering">
+          <div class="week-no">WEEK 2–4<em>3주</em></div>
+          <div>
+            <h3>Filtering</h3>
+            <p>몸에 밴 잘못된 습관과 '가짜 목소리'를 도려내고 본질로 돌아갑니다.</p>
+            <div class="bar"><i style="--w: 23%"></i></div>
+          </div>
+        </li>
+        <li class="week" data-phase="flowing">
+          <div class="week-no">WEEK 5–8<em>4주</em></div>
+          <div>
+            <h3>Flowing</h3>
+            <p>스포츠처럼 소리의 메커니즘을 배우고, 몸이 감각을 기억하도록 훈련합니다.</p>
+            <div class="bar"><i style="--w: 30.8%"></i></div>
+          </div>
+        </li>
+        <li class="week" data-phase="finding">
+          <div class="week-no">WEEK 9–12<em>4주</em></div>
+          <div>
+            <h3>Finding</h3>
+            <p>발견한 '진짜 나'의 톤을 스스로에게 각인시킵니다.</p>
+            <div class="bar"><i style="--w: 30.8%"></i></div>
+          </div>
+        </li>
+        <li class="week" data-phase="beyond">
+          <div class="week-no">WEEK 13<em>1주</em></div>
+          <div>
+            <h3>Beyond the Stage <span class="ko">· 자립의 시작</span></h3>
+            <p>기술을 넘어 예술로. 자기다움의 여정이 시작됩니다.</p>
+            <div class="bar"><i style="--w: 7.7%"></i></div>
+          </div>
+        </li>
+      </ol>
+
+      <blockquote class="manifesto reveal">
+        <span class="big">저는 모두에게 좋은 코치가 아닙니다.</span>
+        <p>
+          결제하셨더라도 <b>사전 질문지</b>를 통해 참여 여부가 결정돼요.
+          진짜로 변화할 준비가 된, 전심으로 자신의 목소리가 궁금한, <b>절실한 분만</b> 신청해 주세요.
+        </p>
+        <p class="sign">음악에도, 인생에도 정답은 없어요 — 그저 자신만의 길이 있을 뿐 :)</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>시작은 이렇게 진행돼요</h2>
+      </div>
+      <ol class="process reveal">
+        <li><h3>무료 가이드</h3><p>PDF로 '진짜 목소리'의 첫 지도를 먼저 받아보세요.</p></li>
+        <li><h3>신청 · 문의</h3><p>이메일이나 인스타그램으로 코칭을 신청합니다.</p></li>
+        <li><h3>사전 질문지</h3><p>질문지를 바탕으로 함께할 수 있을지 결정돼요.</p></li>
+        <li><h3>Week 1 인터뷰</h3><p>2시간 인터뷰로 13주의 밑그림을 그립니다.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section id="youtube">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">YouTube</p>
+        <h2>말보다, 소리로.</h2>
+      </div>
+      <div class="video reveal" id="video"></div>
+      <div class="video-cta reveal">
+        <a class="btn btn-ghost" id="ytMore" href="#" target="_blank" rel="noopener">유튜브에서 더 보기 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>자주 묻는 질문</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>오프라인 레슨인가요?</summary>
+          <p>아니요. 온라인 1:1 보컬 브랜딩 코칭으로 진행돼요.</p>
+        </details>
+        <details>
+          <summary>코스 기간은 얼마나 되나요?</summary>
+          <p>총 13주예요. Week 1 인터뷰로 시작해 Filtering(2–4주), Flowing(5–8주), Finding(9–12주)을 거쳐 Week 13 'Beyond the Stage'로 마무리합니다.</p>
+        </details>
+        <details>
+          <summary>누구나 신청할 수 있나요?</summary>
+          <p>신청은 누구나 가능하지만, 사전 질문지를 통해 참여 여부가 결정돼요. 결제 후에도 마찬가지입니다. 진짜로 변화할 준비가 된 분과 함께하고 싶어요.</p>
+        </details>
+        <details>
+          <summary>무료 가이드는 어떻게 받나요?</summary>
+          <p>위 폼에 이름과 이메일을 남기면 PDF를 보내드려요. 메일이 보이지 않으면 스팸함도 확인해 주세요.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal">1:1 Online Coaching</p>
+      <h2 class="reveal">전심으로,<br>자신의 목소리가 궁금한 분께.</h2>
+      <p class="lead reveal">온라인 1:1 보컬 브랜딩 코칭 · 무료 가이드 신청 · 사전 질문지로 진행됩니다.</p>
+      <div class="contact-ctas reveal">
+        <a class="btn btn-red" id="mailBtn" href="mailto:sjworld1005@gmail.com?subject=%5BREAL%20PLAY%5D%201%3A1%20%EC%BD%94%EC%B9%AD%20%EB%AC%B8%EC%9D%98">이메일로 문의하기</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/digilog9/" target="_blank" rel="noopener">인스타그램 @digilog9</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <a class="logo" href="#top" aria-label="REAL PLAY 맨 위로">
+      <svg><use href="#mark"/></svg>
+      <span class="logo-text">REAL<br>PLAY</span>
+    </a>
+    <p>
+      보컬 브랜딩 코치 Jady(제이디) · 뮤지션 Digilog9 ·
+      <a href="https://www.instagram.com/digilog9/" target="_blank" rel="noopener">@digilog9</a> ·
+      <a href="mailto:sjworld1005@gmail.com">sjworld1005@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+<div class="dock" id="dock" aria-hidden="true">
+  <p><b>나도 톤깡패 될 수 있을까?</b>무료 PDF 가이드</p>
+  <a class="btn btn-red" href="#guide" tabindex="-1">받기 →</a>
+</div>
+
+<script>
+  /* ============================================================
+     설정 — 여기만 채우면 됩니다
+     ============================================================ */
+  const CONFIG = {
+    // 기존 사이트의 가이드 신청 폼이 데이터를 보내던 주소 (Formspree, Google Apps Script, Stibee 등).
+    // 비워두면 제출 시 메일 앱이 열려 sjworld1005@gmail.com 으로 신청 메일을 보냅니다.
+    formEndpoint: "",
+    contactEmail: "sjworld1005@gmail.com",
+
+    // 대표 영상 ID: https://youtu.be/XXXXXXXXXXX 의 XXXXXXXXXXX 부분
+    youtubeId: "",
+    youtubeTitle: "23년차 고인물 보컬 트레이너가 알려주는 기왕하는 노래, 비비 창법 꿀팁",
+    // 채널 주소 (예: https://www.youtube.com/@채널핸들)
+    youtubeChannel: ""
+  };
+
+  /* ---------- Hero waveform ---------- */
+  (() => {
+    const wave = document.getElementById("wave");
+    const n = window.innerWidth < 500 ? 34 : 56;
+    for (let i = 0; i < n; i++) {
+      const s = document.createElement("span");
+      const env = Math.sin((i / (n - 1)) * Math.PI);          // 가운데가 높은 엔벨로프
+      const h = 10 + env * 50 * (0.45 + Math.random() * 0.55);
+      s.style.setProperty("--h", h.toFixed(1) + "px");
+      s.style.setProperty("--d", (-Math.random() * 1.4).toFixed(2) + "s");
+      wave.appendChild(s);
+    }
+  })();
+
+  /* ---------- Header / progress / dock ---------- */
+  (() => {
+    const header = document.querySelector(".header");
+    const bar = document.getElementById("progress");
+    const dock = document.getElementById("dock");
+    const hero = document.querySelector(".hero");
+    const guide = document.getElementById("guide");
+    const contact = document.getElementById("contact");
+    let guideVisible = false, contactVisible = false;
+
+    const update = () => {
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+      header.classList.toggle("scrolled", y > 8);
+      const pastHero = y > hero.offsetHeight * 0.6;
+      dock.classList.toggle("show", pastHero && !guideVisible && !contactVisible);
+    };
+
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.target === guide) guideVisible = e.isIntersecting;
+      if (e.target === contact) contactVisible = e.isIntersecting;
+      update();
+    }), { threshold: 0.15 });
+    io.observe(guide);
+    io.observe(contact);
+
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  })();
+
+  /* ---------- Reveal on scroll ---------- */
+  (() => {
+    const els = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) { els.forEach(e => e.classList.add("in")); return; }
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      if (e.target.id === "timeline") e.target.classList.add("seen");
+      io.unobserve(e.target);
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(e => io.observe(e));
+  })();
+
+  /* ---------- 3F step filter ---------- */
+  (() => {
+    const steps = document.querySelectorAll(".step");
+    const timeline = document.getElementById("timeline");
+    const weeks = timeline.querySelectorAll(".week");
+    steps.forEach(btn => btn.addEventListener("click", () => {
+      const on = btn.getAttribute("aria-pressed") !== "true";
+      steps.forEach(b => b.setAttribute("aria-pressed", "false"));
+      btn.setAttribute("aria-pressed", String(on));
+      timeline.classList.toggle("filtered", on);
+      weeks.forEach(w => w.classList.toggle("on", on && w.dataset.phase === btn.dataset.phase));
+    }));
+  })();
+
+  /* ---------- YouTube (클릭 시에만 로드해서 첫 화면이 빠름) ---------- */
+  (() => {
+    const box = document.getElementById("video");
+    const more = document.getElementById("ytMore");
+    more.href = CONFIG.youtubeChannel || "https://www.youtube.com/";
+    if (!CONFIG.youtubeId) {
+      box.classList.add("empty");
+      box.innerHTML = '<p>대표 영상 자리예요.<br>스크립트 상단 <code>youtubeId</code>에 영상 ID를 넣으면 이곳에 재생됩니다.</p>';
+      return;
+    }
+    const id = encodeURIComponent(CONFIG.youtubeId);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.setAttribute("aria-label", "영상 재생: " + CONFIG.youtubeTitle);
+    btn.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+    btn.innerHTML = '<span class="play"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M2 2l18 10L2 22z" fill="#fff"/></svg></span>';
+    const t = document.createElement("span");
+    t.className = "video-title";
+    t.textContent = CONFIG.youtubeTitle;
+    btn.appendChild(t);
+    btn.addEventListener("click", () => {
+      box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" title="${CONFIG.youtubeTitle.replace(/"/g, "&quot;")}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    });
+    box.appendChild(btn);
+  })();
+
+  /* ---------- Guide form ---------- */
+  (() => {
+    const form = document.getElementById("guideForm");
+    const status = document.getElementById("formStatus");
+    const say = (msg, err) => { status.textContent = msg; status.classList.toggle("err", !!err); };
+
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      if (!name) { say("이름을 입력해 주세요.", true); form.name.focus(); return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say("이메일 주소를 확인해 주세요.", true); form.email.focus(); return; }
+      if (!form.consent.checked) { say("개인정보 수집·이용에 동의해 주세요.", true); return; }
+
+      if (!CONFIG.formEndpoint) {
+        const subject = encodeURIComponent("[REAL PLAY] 무료 PDF 가이드 신청");
+        const body = encodeURIComponent(`이름: ${name}\n이메일: ${email}\n\n'나도 톤깡패 될 수 있을까?' 가이드 신청합니다.`);
+        window.location.href = `mailto:${CONFIG.contactEmail}?subject=${subject}&body=${body}`;
+        say("메일 앱이 열리면 그대로 보내주세요. 확인 후 PDF를 보내드려요.");
+        return;
+      }
+
+      const btn = form.querySelector("button[type=submit]");
+      btn.disabled = true; say("보내는 중…");
+      try {
+        const res = await fetch(CONFIG.formEndpoint, {
+          method: "POST", body: new FormData(form), headers: { Accept: "application/json" }
+        });
+        if (!res.ok) throw new Error(res.status);
+        form.reset();
+        say("신청 완료! 곧 이메일로 PDF가 도착해요. 스팸함도 확인해 주세요.");
+      } catch {
+        say(`전송에 실패했어요. ${CONFIG.contactEmail} 로 직접 연락 주세요.`, true);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  })();
+</script>
+</body>
+</html>
